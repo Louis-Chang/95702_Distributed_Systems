@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:weightSum="8"
+    tools:context=".SecondFragment">
+
+    <!-- Player Names Display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Player 1 Name -->
+        <TextView
+            android:id="@+id/PlayerOneName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Player 1"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <!-- Player 2 Name -->
+        <TextView
+            android:id="@+id/PlayerTwoName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Player 2"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Scores Display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Player 1 Score -->
+        <TextView
+            android:id="@+id/player1Score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Score: 0"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <!-- Player 2 Score -->
+        <TextView
+            android:id="@+id/player2Score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Score: 0"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Cards Display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <!-- Player 1 Card Display -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/player1CardCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/player1CardImage"
+                android:layout_width="160dp"
+                android:layout_height="240dp"
+                android:background="@color/white" /> <!-- Placeholder image -->
+        </LinearLayout>
+
+        <!-- Player 2 Card Display -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/player2CardCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:id="@+id/player2CardImage"
+                android:layout_width="160dp"
+                android:layout_height="240dp"
+                android:background="@color/white" /> <!-- Placeholder image -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Result Display -->
+    <TextView
+        android:id="@+id/resultDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+
+    <!-- Extra padding space -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"/> <!-- Increased weight to push elements below towards bottom -->
+
+    <!-- Draw Card Button -->
+    <Button
+        android:id="@+id/drawCardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Draw Card"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/> <!-- Closer to the bottom, adjusted margin for aesthetic spacing -->
+
+</LinearLayout>
